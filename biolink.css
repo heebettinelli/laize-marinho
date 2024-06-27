@@ -139,7 +139,223 @@
 
 }
 
-
-
 /* for tablet */
+
+@media screen and (min-width: 768px) {
+    body{
+        background-color: var(--background-color);
+        padding: 0;
+        margin: 0;
+    }
+    
+    
+    .clipMask{
+        
+        background-color: var(--header-color);
+        width: 100vw;
+        height: 32vh;
+        border: none;
+        border-radius: 0 0 80% 80%;
+    }
+    
+    .circleMask{
+        width: 220px;
+        height: 220px;
+        border: none;
+        border-radius: 50%;
+        background-color: var(--destaque-color);
+        display: flex;
+        position: absolute;
+        top: 22vw;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo{
+        width: 210px;
+        height: 210px;
+        border: none;
+        border-radius: 50%;
+        background-size: cover;  
+        
+    }
+    
+    .textBtn {
+        font-size: 1.8vw;
+        font-family: var(--body-font);
+    }
+    
+    .textBtn:not(:last-child){
+        font-size: 2vw;
+    }
+    
+    a { 
+        text-decoration: none;
+    }
+    
+    section.title {
+        position: relative;
+        margin: 0px;
+        padding: 5vw;
+    }
+    
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 3vw;
+        
+    }
+    
+    section > h1{
+        font-family: var(--title-font);
+        font-size: 3vw;
+        margin: 1vw;
+    }
+    section > h3{
+        font-family: var(--body-font);
+        font-size: 2vw;
+        margin: 1vw;
+    }
+    section > h4{
+        font-family: var(--body-font);
+        font-size: 1.5vw;
+        margin: 1vw;
+    }
+    
+    button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+    height: 50px;
+    margin: 8px;
+    padding: 16px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--destaque-color);
+    color: var(--font-dark);
+    }
+    
+    footer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 1.2vw;
+        padding: 32px;    
+    }
+}
+
+/* for big screens */
+
+@media screen and (min-width: 1200px) {
+    body{
+        background-color: var(--background-color);
+        padding: 0;
+        margin: 0;
+    }
+    
+    
+    .clipMask{
+        
+        background-color: var(--header-color);
+        width: 100vw;
+        height: 30vh;
+        border: none;
+        border-radius: 0 0 80% 80%;
+    }
+    
+    .circleMask{
+        width: 220px;
+        height: 220px;
+        border: none;
+        border-radius: 50%;
+        background-color: var(--destaque-color);
+        display: flex;
+        position: absolute;
+        top: 10vw;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo{
+        width: 210px;
+        height: 210px;
+        border: none;
+        border-radius: 50%;
+        background-size: cover;  
+        
+    }
+    
+    .textBtn {
+        font-size: 1.3vw;
+        font-family: var(--body-font);
+    }
+    
+    .textBtn:not(:last-child){
+        font-size: 1.5vw;
+    }
+    
+    a { 
+        text-decoration: none;
+    }
+    
+    section.title {
+        position: relative;
+        margin: 0px;
+        padding: 4vw;
+    }
+    
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1vw;
+        
+    }
+    
+    section > h1{
+        font-family: var(--title-font);
+        font-size: 2.5vw;
+        margin: 0.5vw;
+    }
+    section > h3{
+        font-family: var(--body-font);
+        font-size: 1.9vw;
+        margin: 0.5vw;
+    }
+    section > h4{
+        font-family: var(--body-font);
+        font-size: 1.5vw;
+        margin: 0.5vw;
+    }
+    
+    button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+    height: 50px;
+    margin: 8px;
+    padding: 16px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--destaque-color);
+    color: var(--font-dark);
+    }
+    
+    footer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 1vw;
+        padding: 32px;    
+    }
+}
 
