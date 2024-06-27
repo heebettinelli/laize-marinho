@@ -27,109 +27,119 @@
 
 }
 
-body{
-    background-color: var(--background-color);
-    padding: 0;
-    margin: 0;
-}
+/* for mobile */
 
-
-.clipMask{
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: var(--background-color);
+        padding: 0;
+        margin: 0;
+    }
     
-    background-color: var(--header-color);
-    width: 100vw;
-    height: 230px;
+    
+    .clipMask{
+        
+        background-color: var(--header-color);
+        width: 100vw;
+        height: 30vh;
+        border: none;
+        border-radius: 0 0 80% 80%;
+    }
+    
+    .circleMask{
+        width: 140px;
+        height: 140px;
+        border: none;
+        border-radius: 50%;
+        background-color: var(--destaque-color);
+        display: flex;
+        position: absolute;
+        top: 43vw;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo{
+        width: 130px;
+        height: 130px;
+        border: none;
+        border-radius: 50%;
+        background-size: cover;  
+        
+    }
+    
+    .textBtn {
+        font-size: 3vw;
+        font-family: var(--body-font);
+    }
+    
+    .textBtn:not(:last-child){
+        font-size: 4vw;
+    }
+    
+    a { 
+        text-decoration: none;
+    }
+    
+    section.title {
+        position: relative;
+        margin: 0px;
+        padding: 5vw;
+    }
+    
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5vw;
+        
+    }
+    
+    section > h1{
+        font-family: var(--title-font);
+        font-size: 6vw;
+        margin: 2vw;
+    }
+    section > h3{
+        font-family: var(--body-font);
+        font-size: 4vw;
+        margin: 2vw;
+    }
+    section > h4{
+        font-family: var(--body-font);
+        font-size: 3vw;
+        margin: 2vw;
+    }
+    
+    button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: 50px;
+    margin: 8px;
+    padding: 16px;
     border: none;
-    border-radius: 0 0 80% 80%;
-}
-
-.circleMask{
-    width: 130px;
-    height: 130px;
-    border: none;
-    border-radius: 50%;
+    border-radius: 50px;
     background-color: var(--destaque-color);
-    display: flex;
-    position: absolute;
-    top: 52vw;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo{
-    width: 120px;
-    height: 120px;
-    border: none;
-    border-radius: 50%;
-    background-size: cover;  
+    color: var(--font-dark);
+    font-size: 15px;
+    }
     
+    footer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 12px;
+        padding: 32px;    
+    }
+
 }
 
-.textBtn {
-    font-size: 4vw;
-    font-family: var(--body-font);
-}
 
-.textBtn:not(:last-child){
-    font-size: 4.5vw;
-}
 
-a { 
-    text-decoration: none;
-}
+/* for tablet */
 
-section.title {
-    position: relative;
-    margin: 0px;
-    padding: 5vw;
-}
-
-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 5vw;
-    
-}
-
-section > h1{
-    font-family: var(--title-font);
-    font-size: 6vw;
-    margin: 2vw;
-}
-section > h3{
-    font-family: var(--body-font);
-    font-size: 4vw;
-    margin: 2vw;
-}
-section > h4{
-    font-family: var(--body-font);
-    font-size: 3vw;
-    margin: 2vw;
-}
-
-button{
-display: flex;
-align-items: center;
-justify-content: center;
-width: 80vw;
-height: 50px;
-margin: 8px;
-padding: 16px;
-border: none;
-border-radius: 50px;
-background-color: var(--destaque-color);
-color: var(--font-dark);
-font-size: 15px;
-}
-
-footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-size: 12px;
-    padding: 32px;    
-}
