@@ -1,118 +1,104 @@
 @charset "UTF-8";
+
 @font-face {
-    font-family: 'onsite-font-family-';
-    src: url('assets/gestura-font-family/GesturaDisplayTRIAL-Regular-BF64b755043c4b8.otf');
+    font-family: 'onsite-font';
+    src: url('assets/gestura-font-family/GesturaDisplayTRIAL-Regular-BF64b755043c4b8.otf') format('opentype');
 }
 @font-face {
-    font-family: 'gestura-font-family';
-    src: url('assets/gestura-font-family/GesturaDisplayTRIAL-Regular-BF64b755043c4b8.otf');
+    font-family: 'gestura-font';
+    src: url('assets/gestura-font-family/GesturaDisplayTRIAL-Regular-BF64b755043c4b8.otf') format('opentype');
 }
 @font-face {
     font-family: 'Sunrise Time';
     src: url('/assets/Sunrise-Time-BF64b294d821ac2.otf') format('opentype');
 }
-:root{
-    --body-font: 'onsite-font-family-';
-    --title-font: 'gestura-font-family';
+
+:root {
+    --body-font: 'onsite-font';
+    --title-font: 'gestura-font';
     --destaque-font: 'Sunrise Time';
 
     --background-color: #EEE4D8;
     --destaque-color: #9CAEBF;
     --header-color: #082F66;
-    --font-ligth: #FBF9F3;
+    --font-light: #FBF9F3;
     --font-dark: #1A1B1E;
-
-    --button-shadow: 0px 4px 4 15% ;
-
-
+    --button-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* for mobile */
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+}
 
-@media only screen and (max-width: 600px) {
-    body{
-        background-color: var(--background-color);
-        padding: 0;
-        margin: 0;
-    }
-    
-    
-    .clipMask{
-        
-        background-color: var(--header-color);
-        width: 100vw;
-        height: 30vh;
-        border: none;
-        border-radius: 0 0 80% 80%;
-    }
-    
-    .circleMask{
-        width: 140px;
-        height: 140px;
-        border: none;
-        border-radius: 50%;
-        background-color: var(--destaque-color);
-        display: flex;
-        position: absolute;
-        top: 43vw;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .logo{
-        width: 130px;
-        height: 130px;
-        border: none;
-        border-radius: 50%;
-        background-size: cover;  
-        
-    }
-    
-    .textBtn {
-        font-size: 3vw;
-        font-family: var(--body-font);
-    }
-    
-    .textBtn:not(:last-child){
-        font-size: 4vw;
-    }
-    
-    a { 
-        text-decoration: none;
-    }
-    
-    section.title {
-        position: relative;
-        margin: 0px;
-        padding: 5vw;
-    }
-    
-    section{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 8vw;
-        
-    }
-    
-    section > h1{
-        font-family: var(--title-font);
-        font-size: 6vw;
-        margin: 2vw;
-    }
-    section > h3{
-        font-family: var(--body-font);
-        font-size: 4vw;
-        margin: 2vw;
-    }
-    section > h4{
-        font-family: var(--body-font);
-        font-size: 3vw;
-        margin: 2vw;
-    }
-    
-    button{
+.clipMask {
+    background-color: var(--header-color);
+    width: 100vw;
+    height: 30vh;
+    border-radius: 0 0 80% 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.circleMask {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: var(--destaque-color);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20vh;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5vw;
+}
+
+section.title {
+    margin-bottom: 2vw;
+}
+
+section > h1 {
+    font-family: var(--title-font);
+    font-size: 6vw;
+    margin: 2vw;
+}
+
+section > h3,
+section > h4 {
+    font-family: var(--body-font);
+    font-size: 4vw;
+    margin: 2vw;
+}
+
+button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,237 +111,44 @@
     background-color: var(--destaque-color);
     color: var(--font-dark);
     font-size: 15px;
-    }
-    
-    footer{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        text-align: center;
-        font-size: 12px;
-        padding: 32px;    
-    }
-
+    box-shadow: var(--button-shadow);
+    cursor: pointer;
 }
 
-/* for tablet */
+footer {
+    text-align: center;
+    font-size: 12px;
+    padding: 32px;
+    margin-top: 5vh;
+}
 
+/* Responsive Design */
 @media screen and (min-width: 768px) {
-    body{
-        background-color: var(--background-color);
-        padding: 0;
-        margin: 0;
-    }
-    
-    
-    .clipMask{
-        
-        background-color: var(--header-color);
-        width: 100vw;
-        height: 32vh;
-        border: none;
-        border-radius: 0 0 80% 80%;
-    }
-    
-    .circleMask{
+    .clipMask { height: 32vh; }
+    .circleMask {
         width: 220px;
         height: 220px;
-        border: none;
-        border-radius: 50%;
-        background-color: var(--destaque-color);
-        display: flex;
-        position: absolute;
-        top: 22vw;
-        justify-content: center;
-        align-items: center;
     }
-    
-    .logo{
+    .logo {
         width: 210px;
         height: 210px;
-        border: none;
-        border-radius: 50%;
-        background-size: cover;  
-        
     }
-    
-    .textBtn {
-        font-size: 1.8vw;
-        font-family: var(--body-font);
-    }
-    
-    .textBtn:not(:last-child){
-        font-size: 2vw;
-    }
-    
-    a { 
-        text-decoration: none;
-    }
-    
-    section.title {
-        position: relative;
-        margin: 0px;
-        padding: 5vw;
-    }
-    
-    section{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 3vw;
-        
-    }
-    
-    section > h1{
-        font-family: var(--title-font);
-        font-size: 3vw;
-        margin: 1vw;
-    }
-    section > h3{
-        font-family: var(--body-font);
-        font-size: 2vw;
-        margin: 1vw;
-    }
-    section > h4{
-        font-family: var(--body-font);
-        font-size: 1.5vw;
-        margin: 1vw;
-    }
-    
-    button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70vw;
-    height: 50px;
-    margin: 8px;
-    padding: 16px;
-    border: none;
-    border-radius: 50px;
-    background-color: var(--destaque-color);
-    color: var(--font-dark);
-    }
-    
-    footer{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        text-align: center;
-        font-size: 1.2vw;
-        padding: 32px;    
-    }
+    article { margin-top: 25vh; }
+    section { padding: 3vw; }
+    section > h1 { font-size: 3vw; }
+    section > h3 { font-size: 2vw; }
+    section > h4 { font-size: 1.5vw; }
+    button { width: 70vw; }
+    footer { font-size: 1.2vw; }
 }
-
-/* for big screens */
 
 @media screen and (min-width: 1200px) {
-    body{
-        background-color: var(--background-color);
-        padding: 0;
-        margin: 0;
-    }
-    
-    
-    .clipMask{
-        
-        background-color: var(--header-color);
-        width: 100vw;
-        height: 30vh;
-        border: none;
-        border-radius: 0 0 80% 80%;
-    }
-    
-    .circleMask{
-        width: 220px;
-        height: 220px;
-        border: none;
-        border-radius: 50%;
-        background-color: var(--destaque-color);
-        display: flex;
-        position: absolute;
-        top: 10vw;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .logo{
-        width: 210px;
-        height: 210px;
-        border: none;
-        border-radius: 50%;
-        background-size: cover;  
-        
-    }
-    
-    .textBtn {
-        font-size: 1.3vw;
-        font-family: var(--body-font);
-    }
-    
-    .textBtn:not(:last-child){
-        font-size: 1.5vw;
-    }
-    
-    a { 
-        text-decoration: none;
-    }
-    
-    section.title {
-        position: relative;
-        margin: 0px;
-        padding: 4vw;
-    }
-    
-    section{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 1vw;
-        
-    }
-    
-    section > h1{
-        font-family: var(--title-font);
-        font-size: 2.5vw;
-        margin: 0.5vw;
-    }
-    section > h3{
-        font-family: var(--body-font);
-        font-size: 1.9vw;
-        margin: 0.5vw;
-    }
-    section > h4{
-        font-family: var(--body-font);
-        font-size: 1.5vw;
-        margin: 0.5vw;
-    }
-    
-    button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60vw;
-    height: 50px;
-    margin: 8px;
-    padding: 16px;
-    border: none;
-    border-radius: 50px;
-    background-color: var(--destaque-color);
-    color: var(--font-dark);
-    }
-    
-    footer{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        text-align: center;
-        font-size: 1vw;
-        padding: 32px;    
-    }
+    .clipMask { height: 30vh; }
+    article { margin-top: 20vh; }
+    section { padding: 1vw; }
+    section > h1 { font-size: 2.5vw; }
+    section > h3 { font-size: 1.9vw; }
+    section > h4 { font-size: 1.5vw; }
+    button { width: 60vw; }
+    footer { font-size: 1vw; }
 }
-
